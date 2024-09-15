@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Book Free Session - Pet Experts</title>
+
+    <!-- MY STYLE SHEET -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- MY STYLE SHEET SECOND SIGN IN -->
+    <link rel="stylesheet" href="Bookstyles.css">
+
+    <!-- <link rel="stylesheet" href="PetWalkingstyles.css"> -->
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Comfortaa:wght@300&family=Dancing+Script&family=Roboto+Mono:wght@100;200&family=Rowdies&family=Averia+Serif+Libre&family=Rock+Salt&family=Sofia&display=swap" rel="stylesheet">
+
+    <!--  FAVICON -->
+    <link rel="icon" href="Images/icon1.ico">
+
+
+    <!--=============================== SCRIPTS EMAIL.JS=================== -->
+    <!-- MY SCRIPT -->
+    <script src="Bookscript.js"></script>
+
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+
+    <script type="text/javascript">
+    (function(){
+      emailjs.init("MBn6Lh-xiGhjtaxDs");
+    })();
+    </script>
+
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <div style="height:90px" id="navbar">
+        <a id="logo" href="index.html" title="Pet Experts"><img src="Images/logo7.png" alt="logo"></a>
+        <!-- <h2 style="color:white; font-family:Sofia;">Pet Experts</h2> -->
+        <a class="navitem" href="index.html">Home</a>
+        <a class="navitem" href="PetWalking.html">Dog Walking</a>
+        <a class="navitem" href="PetTraining.html">Dog Training</a>
+        <a class="navitem" href="PetGrooming.html">Pet Grooming</a>
+        <a class="navitem" href="about.html">About</a>
+        <!-- <a class="navitem" href="#">Medi-Care</a> -->
+        <!-- <a id="bookbtn" href="Book.html">Book a Free Session <i class="fa fa-arrow-right"></i> </a> -->
+
+    </div> <br><br>
+    <!-- NAVBAR ENDS -->
+
+    <form class="login">
+      <h1>Book Free Trial</h1>
+      <hr>
+      <p class="inputHeading">Full Name</p>
+      <input id="fullname" type="text" name="name" placeholder="Enter Your Full Name"> <br><br>
+
+      <p class="inputHeading">Phone Number</p>
+      <input id="phone_no" type="tel" name="number" placeholder="Enter Your Phone Number"> <br><br>
+
+      <p class="inputHeading">Trial Date</p>
+      <input id="trial_date" type="date" name="date" placeholder="Date"> <br><br>
+
+      <p class="inputHeading">Address</p>
+      <input id="address" name="address" placeholder="Enter Your Full Address">
+
+      <button onclick="SendMail(); reset(); return false" id="loginbtn" type="submit" name="button">Book Now</button>
+      <p id="danger-msg">Please Fill All the Details!</p>
+      <p id="wait-msg">Wait a Moment..</p>
+
+      <!-- <p class="signupPara">need an account? <a class="signup-link" href="#">sign up</a> </p> -->
+    </form>
+
+
+  </body>
+</html>
