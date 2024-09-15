@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Recommendation</title>
+
+
+  <style>
+      #danger-msg{
+        color: red;
+        background-color: rgba(255,140,130,0.9);
+        position: absolute;
+        bottom: 30px;
+        right: 20%;
+        left: 21%;
+        font-weight: bold;
+        box-shadow: 0 0 10px red;
+        width: 40%;
+        border-radius: 30px;
+        font-size: 17px !important;
+        display:none;
+        text-align: center;
+        padding: 5px 0;
+      }
+
+      #wait-msg{
+        color: green;
+        background-color: rgb(0, 255, 42);
+        position: absolute;
+        bottom: 30px;
+        right: 20%;
+        left: 26%;
+        width: 30%;
+        box-shadow: 0 0 10px #00ff0f;
+        font-weight: bold;
+        border-radius: 30px;
+        font-size: 14px;
+        text-align: center;
+        display:none;
+      }
+
+  </style>
+
+
+
+    <!-- MY STYLE SHEET -->
+    <link rel="stylesheet" href="styles.css">
+
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Comfortaa:wght@300&family=Dancing+Script&family=Roboto+Mono:wght@100;200&family=Rowdies&family=Averia+Serif+Libre&family=Rock+Salt&family=Sofia&display=swap" rel="stylesheet">
+
+<!--  FAVICON -->
+<link rel="icon" href="Images/favicon.ico">
+
+
+
+<!--=============================== SCRIPTS EMAIL.JS=================== -->
+<!-- MY SCRIPT -->
+<script src="recommendation.js"></script>
+
+<script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+
+<script type="text/javascript">
+(function(){
+  emailjs.init("qhSqUC2BETn3FVwi3");
+})();
+</script>
+
+
+
+
+  </head>
+  <body>
+
+<!-- NAVBAR -->
+ <div class="bgimg">
+
+
+    <div style="height:90px" id="navbar">
+        <a id="logo" href="" title="Customer 360"><img src="Images/finallogo.png" alt="logo"></a>
+        <a class="navitem" href="index.html">Home</a>
+        <a class="navitem" href="">History</a>
+        <a style="color:#00ffae" class="navitem" href="">Recommendation</a>
+        <a class="navitem" href="">Reminder</a>
+        <a class="navitem" href="">About</a>
+
+    </div> <br><br>
+    <!-- ======================================== PAGE 2.2.0 STARTS =====================================================-->
+      <div style=" padding-top:20px" id="pg2_2_0">
+          <div id="pg2_2_0bookfree">
+            <h1>Enter Details</h1>
+            <p>Name</p>
+            <input id="parentName" type="text" name="name" placeholder="Enter Your Name">
+             <p>Phone Number</p>
+             <input id="parentNumber" type="tel" name="number" placeholder="Enter Your Number">
+             <div style="position: absolute; right: 90px;top: 120px;">
+               <p>Address</p>
+               <input id="parentAddress" type="text" name="address" placeholder="Enter Your Address">
+
+             </div>
+
+             <button type="submit" name="button" onclick="SendMail(); reset(); return false"> Submit</button>
+             <p id="danger-msg">Please Fill All the Details!</p>
+             <p id="wait-msg">Wait a Moment..</p>
+          </div>
+
+        </div>
+   </div> <!--PAGE FIRST INCLUDING NAVBAR-->
+
+
+
+
+    <!-- MY SCRIPT -->
+    <script src="script.js"></script>
+
+
+
+  </body>
+</html>
